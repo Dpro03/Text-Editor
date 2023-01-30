@@ -2,5 +2,5 @@
 
 ## Description
 
-This is
+This is a text editing app that
 
