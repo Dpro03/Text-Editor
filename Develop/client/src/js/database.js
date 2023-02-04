@@ -8,55 +8,55 @@ const initdb = async () =>
         return;
       }
       db.createObjectStore("jate", { keyPath: "id", autoIncrement: true });
-      console.log("jate database created!");
+      console.log("jate database created");
     },
   });
 
-// TODO: Add logic to a method that accepts some content and adds it to the database
-export const getDb = async (content) => {
-  console.log("GET data from database");
-
-  //connect to database and the version we want to use
-  const jateDB = await initdb("jate", 1);
-
-  //create a transaction
-  const tx = jateDB.transaction("jate", "readwrite");
-
-  //get the object store
-  const store = tx.objectStore("jate");
-
-  //Use get method to get one item from the database
-  const request = store.get(1);
-
-  //Get confirmation that the item was added to the database
-  const result = await request;
-  result
-    ? console.log("data retrieved from database", result)
-    : console.log("no data in database");
-  return result?.value;
-};
-
-console.log(result, value);
-
+// Accepts some content and add it to the database.
 export const putDb = async (content) => {
-  console.log("PUT data into database");
+  console.log("PUT to the database");
 
-  //connect to database and the version we want to use
-  const jateDB = await initdb("jate", 1);
+  // Create a connection to the database and version we want to use.
+  const jateDb = await openDB("jate", 1);
 
-  //create a transaction
-  const tx = jateDB.transaction("jate", "readwrite");
+  // Create a new transaction and specify the database and data privileges.
+  const tx = jateDb.transaction("jate", "readwrite");
 
-  //get the object store
+  // Open up the desired object store.
   const store = tx.objectStore("jate");
 
-  //Use put method to add one item to the database
+  // Use the .put() method to update data in the database.
+  // The text editor consists of one field of information that is repeatedly retrieved and updated.
   const request = store.put({ id: 1, value: content });
 
-  //Get confirmation that the item was added to the database
+  // Get confirmation of the request.
   const result = await request;
-  console.log("result.value", result);
-  return result;
+  console.log("🚀 - data saved to the database", result);
+};
+
+// Gets all the content from the database.
+export const getDb = async () => {
+  console.log("GET from the database");
+
+  // Create a connection to the database and version we want to use.
+  const jateDb = await openDB("jate", 1);
+
+  // Create a new transaction and specify the database and data privileges.
+  const tx = jateDb.transaction("jate", "readonly");
+
+  // Open up the desired object store.
+  const store = tx.objectStore("jate");
+
+  // Use the .get() method to get the one text editor entry from the database.
+  const request = store.get(1);
+
+  // Get confirmation of the request.
+  const result = await request;
+  // If there is a text editor entry, return it.
+  result
+    ? console.log("🚀 - data retrieved from the database", result.value)
+    : console.log("🚀 - data not found in the database");
+  return result?.value;
 };
 
 initdb();
