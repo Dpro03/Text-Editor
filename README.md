@@ -86,7 +86,7 @@ Alternatively, to use the live application, click here.
 
 ## Screenshot of Application
 
-![Alt text](Develop/client/dist/assets/icons/J.A.T.E.png)
+![Alt text](Develop/client/dist/assets/icons/jate.png)
 
 ## Repository 
 
@@ -102,7 +102,7 @@ David Proto
 
 Click [HERE](https://github.com/Dpro03) to visit my GitHub page!
 
-Any Questions?  Email me [Here!](dpro308@gmail.com)
+Any Questions?  Email me [Here!](mailto:dpro308@gmail.com)
 
 
 
