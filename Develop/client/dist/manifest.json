@@ -36,6 +36,7 @@
   "orientation": "portrait",
   "display": "standalone",
   "start_url": "./",
+  "id": "./",
   "description": "Create notes with or without an internet connection!",
   "background_color": "#272822",
   "theme_color": "#272822"
