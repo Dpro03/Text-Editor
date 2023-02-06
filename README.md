@@ -86,7 +86,7 @@ Alternatively, to use the live application, click here.
 
 ## Screenshot of Application
 
-![Alt text](/client/dist/assets/icons/jate.png)
+![Alt text](/jate.png)
 
 ## Repository 
 
@@ -94,7 +94,7 @@ The repo for this application can be found: [Here](https://github.com/Dpro03/Tex
 
 ## Deployed Application
 
-The live application is deployed to Heroku.  To access it, click [Here]()
+The live application is deployed to Heroku.  To access it, click [Here](https://warm-island-68234.herokuapp.com/)
 
 ## Author
 
