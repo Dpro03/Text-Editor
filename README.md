@@ -86,7 +86,7 @@ Alternatively, to use the live application, click here.
 
 ## Screenshot of Application
 
-![Alt text](Develop/client/dist/assets/icons/jate.png)
+![Alt text](/client/dist/assets/icons/jate.png)
 
 ## Repository 
 
